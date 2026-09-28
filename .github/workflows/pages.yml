@@ -25,6 +25,7 @@ jobs:
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: docs
+          # 注意：docs/ 本身就是这个发布仓库的根目录，所以上传的是仓库根
+          path: .
       - id: deployment
         uses: actions/deploy-pages@v4
